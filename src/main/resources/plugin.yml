@@ -2,3 +2,7 @@ name: pvpBanner
 version: '1.0-SNAPSHOT'
 main: dev.Error110.pvpBanner.PvpBanner
 api-version: '1.21'
+commands:
+  pvpban:
+    description: Command to ban people for pvping even though pvp is on in earth and the owner doesnt want to turn it off but wants a custom plugin to ban people from pvp.
+    usage: /<add/remove> [residentName]
