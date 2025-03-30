@@ -1,0 +1,4 @@
+name: pvpBanner
+version: '1.0-SNAPSHOT'
+main: dev.Error110.pvpBanner.PvpBanner
+api-version: '1.21'
