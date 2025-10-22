@@ -24,11 +24,7 @@ public class bannedPlayerPvp implements Listener {
     {
         Player attacker = event.getAttackingPlayer();
         Player victim = event.getVictimPlayer();
-        if (event.isCancelled()) {
-            attacker.sendMessage("event was canceled before thing");
-            victim.sendMessage("event was cancled before thing");
-            return;
-        }
+        if (event.isCancelled()) return;
         TownyWorld world = TownyAPI.getInstance().getTownyWorld(event.getVictimPlayer().getWorld().getName());
         TownyUniverse universe = TownyUniverse.getInstance();
 
@@ -37,7 +33,7 @@ public class bannedPlayerPvp implements Listener {
             plugin.getLogger().severe("banned uuid " + bannedUUID);
             if(victim.getUniqueId().equals(bannedUUID)) {
                 event.setCancelled(true);
-                attacker.sendMessage(ChatColor.RED + "this person is pvp banned as hes too fucking good at pvp for this server but fishy doesnt want to disable pvp in wild but is willing to make a custom plugin to ban someone from pvp");
+                attacker.sendMessage(ChatColor.RED + "This person is banned from pvp.");
             } else {
                 plugin.getLogger().severe("banned uuid " + bannedUUID + "\n" + "towny uuid " + victim.getUniqueId());
             }
